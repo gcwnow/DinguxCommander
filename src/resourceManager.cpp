@@ -14,14 +14,14 @@ CResourceManager::CResourceManager(void) :
     m_font(NULL)
 {
     // Load images
-    m_surfaces[T_SURFACE_BG] = SDL_utils::loadImage("res/background.png");
-    m_surfaces[T_SURFACE_FILE] = SDL_utils::loadImage("res/file.png");
-    m_surfaces[T_SURFACE_FOLDER] = SDL_utils::loadImage("res/folder.png");
-    m_surfaces[T_SURFACE_UP] = SDL_utils::loadImage("res/up.png");
+    m_surfaces[T_SURFACE_BG] = SDL_utils::loadImage(RESDIR "/background.png");
+    m_surfaces[T_SURFACE_FILE] = SDL_utils::loadImage(RESDIR "/file.png");
+    m_surfaces[T_SURFACE_FOLDER] = SDL_utils::loadImage(RESDIR "/folder.png");
+    m_surfaces[T_SURFACE_UP] = SDL_utils::loadImage(RESDIR "/up.png");
     m_surfaces[T_SURFACE_CURSOR1] = SDL_utils::createImage(159, 15, SDL_MapRGB(Globals::g_screen->format, COLOR_CURSOR_1));
     m_surfaces[T_SURFACE_CURSOR2] = SDL_utils::createImage(159, 15, SDL_MapRGB(Globals::g_screen->format, COLOR_CURSOR_2));
     // Load font
-    m_font = SDL_utils::loadFont("res/Fiery_Turk.ttf", 8);
+    m_font = SDL_utils::loadFont(RESDIR "/Fiery_Turk.ttf", 8);
 }
 
 void CResourceManager::sdlCleanup(void)

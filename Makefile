@@ -5,8 +5,11 @@ endif
 
 include config-$(CONFIG).mk
 
+RESDIR:=res
+
 CXXFLAGS+=-Wall -Wno-unknown-pragmas -Wno-format
 CXXFLAGS+=$(shell $(SDL_CONFIG) --cflags)
+CXXFLAGS+=-DRESDIR="\"$(RESDIR)\""
 LINKFLAGS+=-s
 LINKFLAGS+=$(shell $(SDL_CONFIG) --libs) -lSDL_image -lSDL_ttf
 

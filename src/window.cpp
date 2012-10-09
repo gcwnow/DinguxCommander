@@ -41,6 +41,13 @@ const int CWindow::execute(void)
                 if (m_retVal)
                     l_loop = false;
             }
+            else if (l_event.type == SDL_QUIT)
+            {
+                // Re-insert event so we exit from nested menus
+                SDL_PushEvent(&l_event);
+                l_loop = false;
+                break;
+            }
         }
         // Handle key hold
         if (l_loop)

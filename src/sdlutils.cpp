@@ -1,6 +1,6 @@
 #include <iostream>
 #include "sdlutils.h"
-#include "SDL/SDL_image.h"
+#include <SDL_image.h>
 #include "def.h"
 #include "resourceManager.h"
 

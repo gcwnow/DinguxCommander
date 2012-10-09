@@ -1,6 +1,4 @@
-#ifndef PLATFORM_DINGOO
 #include <cstdlib>
-#endif
 #include <iostream>
 #include <SDL.h>
 #include <SDL_ttf.h>
@@ -48,13 +46,9 @@ int main(int argc, char** argv)
 
     // Create instances
     CResourceManager::instance();
-    #ifdef PLATFORM_DINGOO
-    CCommander l_commander(PATH_DEFAULT, PATH_DEFAULT);
-    #else
-    std::string l_path = getenv("HOME");
-    l_path += "/Dev/DinguxCommander/test";
+    char *home = getenv("HOME");
+    std::string l_path = home ? home : PATH_DEFAULT;
     CCommander l_commander(l_path, l_path);
-    #endif
 
     // Main loop
     l_commander.execute();

@@ -61,7 +61,7 @@
 #define MYKEY_OPERATION     SDLK_SPACE        // Y
 #define MYKEY_SELECT        SDLK_ESCAPE       // SELECT
 #define MYKEY_TRANSFER      SDLK_RETURN       // START
-#define PATH_DEFAULT        "/boot/local"
+#define PATH_DEFAULT        "/"
 #define FILE_SYSTEM         "/dev/mmcblk0p1"
 #else
 // Keys for PC keyboard

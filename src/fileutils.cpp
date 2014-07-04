@@ -60,6 +60,8 @@ void File_utils::copyFile(const std::vector<std::string> &p_src, const std::stri
         }
         if (l_execute)
         {
+            // Waiting message
+            SDL_utils::pleaseWait();
             l_command = "\\cp -r " + specialChars(*l_it) + " " + specialChars(p_dest);
             INHIBIT(std::cout << "Command: " << l_command << std::endl;)
             system(l_command.c_str());
@@ -116,6 +118,8 @@ void File_utils::moveFile(const std::vector<std::string> &p_src, const std::stri
         }
         if (l_execute)
         {
+            // Waiting message
+            SDL_utils::pleaseWait();
             l_command = "\\mv " + specialChars(*l_it) + " " + specialChars(p_dest);
             INHIBIT(std::cout << "Command: " << l_command << std::endl;)
             system(l_command.c_str());

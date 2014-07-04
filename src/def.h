@@ -31,7 +31,7 @@
 #define COLOR_BG_2            232,228,224
 #define COLOR_BORDER          102,85,74
 
-#ifdef PLATFORM_DINGOO
+#if defined(PLATFORM_DINGOO)
 // Keys for Dingoo
 #define MYKEY_UP            SDLK_UP           // Up
 #define MYKEY_RIGHT         SDLK_RIGHT        // Right
@@ -43,6 +43,22 @@
 #define MYKEY_OPEN          SDLK_LCTRL        // A
 #define MYKEY_PARENT        SDLK_LALT         // B
 #define MYKEY_OPERATION     SDLK_SPACE        // X
+#define MYKEY_SELECT        SDLK_ESCAPE       // SELECT
+#define MYKEY_TRANSFER      SDLK_RETURN       // START
+#define PATH_DEFAULT        "/boot/local"
+#define FILE_SYSTEM         "/dev/mmcblk0p1"
+#elif defined(PLATFORM_GCW0)
+// Keys for GCW Zero
+#define MYKEY_UP            SDLK_UP           // Up
+#define MYKEY_RIGHT         SDLK_RIGHT        // Right
+#define MYKEY_DOWN          SDLK_DOWN         // Down
+#define MYKEY_LEFT          SDLK_LEFT         // Left
+#define MYKEY_SYSTEM        SDLK_LSHIFT       // X
+#define MYKEY_PAGEUP        SDLK_TAB          // L
+#define MYKEY_PAGEDOWN      SDLK_BACKSPACE    // R
+#define MYKEY_OPEN          SDLK_LCTRL        // A
+#define MYKEY_PARENT        SDLK_LALT         // B
+#define MYKEY_OPERATION     SDLK_SPACE        // Y
 #define MYKEY_SELECT        SDLK_ESCAPE       // SELECT
 #define MYKEY_TRANSFER      SDLK_RETURN       // START
 #define PATH_DEFAULT        "/boot/local"
